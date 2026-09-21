@@ -1,0 +1,18 @@
+h1 {font-family: "Tiro Gurmukhi", serif;
+	text-align: center;}
+
+
+
+h2 {text-align: center;
+	text-transform: uppercase;
+}
+
+h1, h2 {color: #fff360;}
+
+body {color: #bbdfd1; background-color: black;}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
