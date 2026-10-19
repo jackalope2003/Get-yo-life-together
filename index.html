@@ -2,7 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Get yo life together</title>
+
+		<!-- AI Use Disclosure -->
+		<!--
+		AI Use Disclosure:
+		Tool(s): Gemini
+		Purpose: Helped explain Bootstrap grid behavior, suggested layout options, and assisted with writing responsive CSS media queries, updating documentation, and integrating custom canvas animation.
+		Human Role: I selected which suggestions to use, modified the layout, and verified responsiveness manually.
+		-->
+
+		<!-- Bootstrap 5.3.8 CSS CDN -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- GOOGLE FONTS FIRST -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,84 +23,119 @@
 
 		<!-- EXTERNAL CSS SECOND -->
 		<link rel="stylesheet" href="style.css">
+
+		<style>
+			#streamerCanvas {
+				position: fixed;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 9999;
+			}
+		</style>
 	</head>
 
 	<body>
-		<header>
+		<header class="mb-4">
 			<h1>Get yo life together</h1>
-			<img src="Spongebob.jpeg" alt="Spongebob putting his finger in Squidwards face and screaming at him to get a job" class="hero-img">
+			<img src="Spongebob.jpeg" alt="Spongebob putting his finger in Squidwards face and screaming at him to get a job" class="hero-img img-fluid">
 		</header>
 
-		<main class="schedule-container">
-			<section class="day-card">
-				<h2>Sunday</h2>
-				<ul>
-					<li>Make a healthy breakfast</li>
-					<li>Watch some sports while you eat</li>
-					<li>Do some homework</li>
-					<li>Go to intramural game</li>
-				</ul>
-			</section>
+		<main class="container my-5">
+			<h2 class="text-warning mb-3 text-center">Your Weekly Schedule</h2>
+			<div class="schedule-scroll-container d-flex flex-row overflow-x-auto gap-3 pb-3">
+				<!-- Sunday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Sunday</h2>
+						<ul class="list-unstyled">
+							<li>Make a healthy breakfast</li>
+							<li>Watch some sports while you eat</li>
+							<li>Do some homework</li>
+							<li>Go to intramural game</li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="day-card">
-				<h2>Monday</h2>
-				<ul>
-					<li>Make a healthy breakfast</li>
-					<li>Go to class</li>
-					<li>Go to club meeting</li>
-					<li>Go to intramural game</li>
-				</ul>
-			</section>
+				<!-- Monday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Monday</h2>
+						<ul class="list-unstyled">
+							<li>Make a healthy breakfast</li>
+							<li>Go to class</li>
+							<li>Go to club meeting</li>
+							<li>Go to intramural game</li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="day-card">
-				<h2>Tuesday</h2>
-				<ul>
-					<li>Go to class</li>
-					<li>Make a healthy lunch</li>
-					<li>Do some homework</li>
-				</ul>
-			</section>
+				<!-- Tuesday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Tuesday</h2>
+						<ul class="list-unstyled">
+							<li>Go to class</li>
+							<li>Make a healthy lunch</li>
+							<li>Do some homework</li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="day-card">
-				<h2>Wednesday</h2>
-				<ul>
-					<li>Make a healthy breakfast</li>
-					<li>Go to class</li>
-					<li>Go to the gym</li>
-					<li>Make a healthy lunch</li>
-				</ul>
-			</section>
+				<!-- Wednesday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Wednesday</h2>
+						<ul class="list-unstyled">
+							<li>Make a healthy breakfast</li>
+							<li>Go to class</li>
+							<li>Go to the gym</li>
+							<li>Make a healthy lunch</li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="day-card">
-				<h2>Thursday</h2>
-				<ul>
-					<li>Go to class</li>
-					<li>Make a healthy lunch</li>
-					<li>Go to class</li>
-					<li>Go to work</li>
-				</ul>
-			</section>
+				<!-- Thursday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Thursday</h2>
+						<ul class="list-unstyled">
+							<li>Go to class</li>
+							<li>Make a healthy lunch</li>
+							<li>Go to class</li>
+							<li>Go to work</li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="day-card">
-				<h2>Friday</h2>
-				<ul>
-					<li>Make a healthy breakfast</li>
-					<li>Do some homework</li>
-					<li>Go to the gym</li>
-					<li>Make a healthy lunch</li>
-				</ul>
-			</section>
+				<!-- Friday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Friday</h2>
+						<ul class="list-unstyled">
+							<li>Make a healthy breakfast</li>
+							<li>Do some homework</li>
+							<li>Go to the gym</li>
+							<li>Make a healthy lunch</li>
+						</ul>
+					</div>
+				</section>
 
-			<section class="day-card">
-				<h2>Saturday</h2>
-				<ul>
-					<li>Make a healthy breakfast</li>
-					<li>Go to work</li>
-				</ul>
-			</section>
+				<!-- Saturday -->
+				<section class="card day-card flex-shrink-0">
+					<div class="card-body">
+						<h2>Saturday</h2>
+						<ul class="list-unstyled">
+							<li>Make a healthy breakfast</li>
+							<li>Go to work</li>
+						</ul>
+					</div>
+				</section>
+			</div>
 		</main>
 
-		<footer class="extra-motivation">
+		<footer class="extra-motivation text-center my-4">
 			<h2>Get some <a href="https://youtu.be/Bzpx9YZxK4o?si=dOlRZIz8JLUK5WWD" target="_blank">extra motivation</a> if you're not feeling up to it today.</h2>
 		</footer>
 
@@ -101,7 +148,140 @@
 			<label><input type="checkbox" name="thursday"> Thursday</label>
 			<label><input type="checkbox" name="friday"> Friday</label>
 			<label><input type="checkbox" name="saturday"> Saturday</label>
-			<button type="button">Submit Check</button>
+			<button id="celebrateBtn" type="button">Submit</button>
 		</form>
+
+		<!-- Canvas for Streamers -->
+		<canvas id="streamerCanvas" aria-hidden="true"></canvas>
+
+		<!-- Bootstrap 5.3.8 JS Bundle CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Streamer Animation Script -->
+		<script>
+			const canvas = document.getElementById("streamerCanvas");
+			const ctx = canvas.getContext("2d");
+			const button = document.getElementById("celebrateBtn");
+
+			const colors = [
+				"#ea9999", // Patrick dark pink
+				"#ecb1b1", // Patrick light pink
+				"#78d23e", // Patrick dark green
+				"#97de69", // Patrick light green
+				"#a594da"  // Patrick purple
+			];
+
+			let streamers = [];
+			let animationId = null;
+
+			function resizeCanvas() {
+				const dpr = window.devicePixelRatio || 1;
+				canvas.width = window.innerWidth * dpr;
+				canvas.height = window.innerHeight * dpr;
+				canvas.style.width = window.innerWidth + "px";
+				canvas.style.height = window.innerHeight + "px";
+				ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+			}
+
+			window.addEventListener("resize", resizeCanvas);
+			resizeCanvas();
+
+			class Streamer {
+				constructor(side) {
+					this.side = side;
+					this.x = side === "left" ? -20 : window.innerWidth + 20;
+					this.y = window.innerHeight * (0.35 + Math.random() * 0.3);
+
+					this.vx = (side === "left" ? 1 : -1) * (8 + Math.random() * 8);
+					this.vy = -8 - Math.random() * 8;
+
+					this.gravity = 0.16;
+					this.drag = 0.992;
+
+					this.length = 290 + Math.random() * 120;
+					this.amplitude = 3 + Math.random() * 7;
+					this.frequency = 0.07 + Math.random() * 0.05;
+					this.phase = Math.random() * Math.PI * 2;
+
+					this.color = colors[Math.floor(Math.random() * colors.length)];
+					this.width = 3 + Math.random() * 3;
+					this.life = 0;
+					this.maxLife = 130 + Math.random() * 50;
+				}
+
+				update() {
+					this.x += this.vx;
+					this.y += this.vy;
+					this.vx *= this.drag;
+					this.vy += this.gravity;
+					this.phase += 0.15;
+					this.life++;
+				}
+
+				draw() {
+					const opacity = Math.min(1, (this.maxLife - this.life) / 30);
+
+					ctx.save();
+					ctx.globalAlpha = Math.max(0, opacity);
+					ctx.strokeStyle = this.color;
+					ctx.lineWidth = this.width;
+					ctx.lineCap = "round";
+
+					const angle = Math.atan2(this.vy, this.vx);
+					ctx.translate(this.x, this.y);
+					ctx.rotate(angle);
+
+					ctx.beginPath();
+
+					for (let i = 0; i <= this.length; i += 3) {
+						const x = -i;
+						const y = Math.sin(i * this.frequency + this.phase) * this.amplitude;
+
+						if (i === 0) {
+							ctx.moveTo(x, y);
+						} else {
+							ctx.lineTo(x, y);
+						}
+					}
+
+					ctx.stroke();
+					ctx.restore();
+				}
+			}
+
+			function animate() {
+				ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+				streamers = streamers.filter(s => s.life < s.maxLife);
+
+				streamers.forEach(s => {
+					s.update();
+					s.draw();
+				});
+
+				if (streamers.length > 0) {
+					animationId = requestAnimationFrame(animate);
+				} else {
+					animationId = null;
+				}
+			}
+
+			function celebrate() {
+				if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+					return;
+				}
+
+				for (let i = 0; i < 24; i++) {
+					streamers.push(new Streamer("left"));
+					streamers.push(new Streamer("right"));
+				}
+
+				if (animationId === null) {
+					animate();
+				}
+			}
+
+			button.addEventListener("click", celebrate);
+		</script>
 	</body>
 </html>
